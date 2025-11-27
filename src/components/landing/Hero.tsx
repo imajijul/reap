@@ -25,7 +25,7 @@ const Hero = () => {
                 </div>
             </div>
         </Wrapper>
-        <Image width={100} height={100} src={"/feature-img.png"} className='h-60 sm:h-90 w-[80%] sm:w-[60%] absolute -bottom-2 sm:-bottom-5 left-[50%] translate-x-[-50%] ' alt='feature-img'/>
+        <Image width={100} height={100} src={"/hero-img.jpeg"} className='h-60 sm:h-90 w-[80%] sm:w-[60%] absolute -bottom-2 sm:-bottom-5 left-[50%] translate-x-[-50%] ' alt='feature-img'/>
     </div>
   )
 }

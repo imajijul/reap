@@ -91,7 +91,7 @@ const Feature = () => {
                     FeatureData && FeatureData.map((item, i)=>{
                         return(
                             <div className="px-4 sm:px-10 bg-gray-200/30 p-5 rounded" key={i}>
-                                <Image src={"/feature-img.webp"}  width={100} height={100} alt="img" className="w-full rounded" />
+                                <Image src={item.img}  width={100} height={100} alt="img" className="w-full rounded" />
                                 <h1 className="text-md font-semibold sm:py-3">{item.title}</h1>
                                 <p className="text-gray-600">{item.description}</p>
                             </div>
