@@ -1,34 +1,22 @@
-import type { Metadata } from "next";
-import "./globals.css";
-import Footer from "../components/landing/Footer";
-import Navbar from "../components/landing/Navbar";
-import {Roboto} from "next/font/google"
-
-
-const roboto = Roboto({
-  weight: '400',
-  subsets: ['latin'],
-})
-
-export const metadata: Metadata = {
-  title: "Reap",
-  description: "Develop By flowentech",
-};
+import "@/styles/globals.css";
+import React from "react";
+import { cn } from "../lib/utils";
 
 export default function RootLayout({
-  children,
+    children,
 }: Readonly<{
-  children: React.ReactNode;
+    children: React.ReactNode;
 }>) {
-  return (
-    <html lang="en">
-      <body
-        className={`${roboto.className} antialiased`}
-      > 
-        <Navbar/>
-        <main className="min-h-screen">{children}</main>
-        <Footer/>
-      </body>
-    </html>
-  );
-}
+    return (
+        <html lang="en" suppressHydrationWarning>
+            <body
+                className={cn(
+                    "min-h-screen bg-background text-foreground antialiased font-heading overflow-x-hidden !scrollbar-hide"
+                )}
+            >
+                    
+                    {children}
+            </body>
+        </html>
+    );
+};
