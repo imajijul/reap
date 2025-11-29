@@ -39,7 +39,7 @@ const Process = () => {
                 <span className="max-px-1 max-w-6 max-h-6 bg-[#2D605A] rounded-[50%] text-white flex justify-center">
                   {i + 1}
                 </span>
-                <h1 className="text-md font-semibold sm:py-3">{item.title}</h1>
+                <h1 className="text-md font-semibold py-2 sm:py-3">{item.title}</h1>
                 <p className="text-gray-600">{item.description}</p>
               </div>
             );

@@ -1,9 +1,9 @@
 import React from 'react'
 import Wrapper from '../global/Wrapper'
 import {Sparkle } from "lucide-react"
-import { Button } from '@/components/ui/button'
 import Image from 'next/image'
 import  Link  from 'next/link'
+import { Button } from '../ui/button'
 const Hero = () => {
   return (
     <div className='bg-[#2F524D] h-full pt-15 pb-60 sm:pb-90 relative w-full'>

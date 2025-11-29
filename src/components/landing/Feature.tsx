@@ -1,8 +1,7 @@
 import { CheckCircle, CircleCheck, CircleCheckBig, HandCoins, Mic, PenLine, Shredder, Sparkle } from "lucide-react"
-
 import Wrapper from "../global/Wrapper"
-import { Button } from "@/components/ui/button"
 import Image from "next/image"
+import { Button } from "../ui/button"
 
 const Feature = () => {
     const FeatureData = [
@@ -55,7 +54,7 @@ const Feature = () => {
                     </div>
 
                     <h1 className="text-xl font-semibold sm:my-3">Work Smarter, <br /> not harder</h1>
-                    <p className="text-gray-600">Your team gets guided, support not guesswork.</p>
+                    <p className="text-gray-600 py-1">Your team gets guided, support not guesswork.</p>
                 </div>
 
                 {/* right side -> feature */}
@@ -79,7 +78,7 @@ const Feature = () => {
                     </div>
                     
                     <h1 className="text-xl font-semibold sm:my-3">Trace every case, <br /> in one place </h1>
-                    <p className="text-gray-600">Your team gets guided, support not guesswork.</p>
+                    <p className="text-gray-600 py-1">Your team gets guided, support not guesswork.</p>
                 </div>
 
             </div>
@@ -92,7 +91,7 @@ const Feature = () => {
                         return(
                             <div className="px-4 sm:px-10 bg-gray-200/30 p-5 rounded" key={i}>
                                 <Image src={item.img}  width={100} height={100} alt="img" className="w-full rounded" />
-                                <h1 className="text-md font-semibold sm:py-3">{item.title}</h1>
+                                <h1 className="text-md font-semibold py-2 sm:py-3">{item.title}</h1>
                                 <p className="text-gray-600">{item.description}</p>
                             </div>
                         )

@@ -1,4 +1,4 @@
-import { cn } from "@/lib/utils"
+import { cn } from "@/src/lib/utils"
 import React from "react"
 interface Props{
     className?: string;
@@ -6,9 +6,11 @@ interface Props{
 }
 const Wrapper = ({children, className}:Props) => {
   return (
-    <div className={cn("w-full mx-auto lg:mx-w-scree-xl lg:mx-auto px-4 md:px-12", className )}>
-        {children}
-    </div>
+    <div
+        className={cn("w-full mx-auto lg:max-w-screen-xl lg:mx-auto px-4 md:px-12",className )}
+        >
+            {children}
+        </div>
   )
 }
 

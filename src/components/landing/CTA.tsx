@@ -1,7 +1,7 @@
 import React from 'react'
 import Wrapper from '../global/Wrapper'
-import { Button } from '@/components/ui/button'
 import { Check } from 'lucide-react'
+import { Button } from '../ui/button'
 
 const CTA = () => {
   return (

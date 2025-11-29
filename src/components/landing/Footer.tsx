@@ -4,9 +4,9 @@ import Link from 'next/link'
 
 const Footer = () => {
   return (
-    <div className='w-full bg-[#101C1C] text-white py-10 sm:py-15'>
+    <footer className='w-full bg-[#101C1C] text-white py-10 sm:py-15'>
         <Wrapper>
-            <div className='flex justify-between sm:items-center'>
+            <div className='flex-col sm:flex justify-between sm:items-center'>
                 {/* left side => company*/}
                 <div className=''>
                     <h1 className='text-4xl font-bold'>Reap</h1>
@@ -14,7 +14,7 @@ const Footer = () => {
                 </div>
                 
                 {/* right side links */}
-                <div className='flex max-sm:flex-col justify-between gap-3 sm:gap-20'>
+                <div className='flex justify-between gap-3 sm:gap-20'>
                     <ul className='flex flex-col gap-2'>
                         <li className='text-muted-foreground'>Menu</li>
                         <li><Link href={"/"}>Benifits</Link></li>
@@ -38,9 +38,9 @@ const Footer = () => {
 
 
             {/* temrs & conditions */}
-            <div className='flex max-sm:flex-col gap-4 justify-between mt-5 sm:mt-10'>
+            <div className='sm:flex gap-4 items-center justify-items-center sm:justify-between mt-5 sm:mt-10'>
                 <p>@reap, all right reserved</p>
-                <ul className='flex max-sm:flex-col sm:gap-4'>
+                <ul className='sm:flex gap-4'>
                     <li><Link href={"/"}>Privacy Policy</Link></li>
                     <li><Link href={"/"}>Terms & Service</Link></li>
                     <li><Link href={"/"}>Cookies Settings</Link></li>
@@ -49,7 +49,7 @@ const Footer = () => {
 
 
         </Wrapper>
-    </div>
+    </footer>
   )
 }
 
