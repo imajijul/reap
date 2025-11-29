@@ -2,7 +2,6 @@
 import Wrapper from "../global/Wrapper"
 import Link from "next/link"
 import { LinkData } from "@/src/constant/LinkData"
-import { Menu, X } from "lucide-react"
 import { useState } from "react"
 import { Button } from "../ui/button"
 import MobileMenu from "./MobileMenu"
