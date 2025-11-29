@@ -1,3 +1,20 @@
+import type { Metadata } from "next";
+import "./globals.css";
+import Footer from "@/src/components/landing/Footer";
+import Navbar from "@/src/components/landing/Navbar";
+import {Roboto} from "next/font/google"
+
+
+const roboto = Roboto({
+  weight: '400',
+  subsets: ['latin'],
+})
+
+export const metadata: Metadata = {
+  title: "Reap",
+  description: "Develop By flowentech",
+};
+
 import React from "react";
 import { cn } from "../lib/utils";
 import "./globals.css"
