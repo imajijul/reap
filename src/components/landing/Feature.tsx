@@ -6,17 +6,17 @@ import { Button } from "../ui/button"
 const Feature = () => {
     const FeatureData = [
         {
-            img: "https://www.stimulsoft.com/images/products/dashboards-blazor/viewer/05-DashboardInsuranceRisk.png",
+            img: "/hero-img.jpeg",
             title: "Contrary to popular belief, Lorem",
             description: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classica"
         },
         {
-            img: "https://www.stimulsoft.com/images/products/dashboards-blazor/viewer/05-DashboardInsuranceRisk.png",
+            img: "/hero-img.jpeg",
             title: "Contrary to popular belief, Lorem",
             description: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classica"
         },
         {
-            img: "https://www.stimulsoft.com/images/products/dashboards-blazor/viewer/05-DashboardInsuranceRisk.png",
+            img: "/hero-img.jpeg",
             title: "Contrary to popular belief, Lorem",
             description: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classica"
         }

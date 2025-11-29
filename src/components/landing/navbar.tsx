@@ -21,7 +21,7 @@ const Navbar = () => {
               {
                 LinkData && LinkData.map((link, i)=>{
                   return(
-                    <li key={i}><Link href={link.id}>{link.label}</Link></li>
+                    <li key={i}><Link href={"#"}>{link.label}</Link></li>
                   )
                 })
               }
