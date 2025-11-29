@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   description: "Develop By flowentech",
 };
 
-export default function RootLayout({
+export default function Layout({
   children,
 }: Readonly<{
   children: React.ReactNode;
