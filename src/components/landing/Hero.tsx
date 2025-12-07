@@ -6,7 +6,7 @@ import  Link  from 'next/link'
 import { Button } from '../ui/button'
 const Hero = () => {
   return (
-    <div className='bg-[#2F524D] h-full pt-15 pb-60 sm:pb-90 relative w-full'>
+    <div className='bg-[#2F524D] h-full pt-15 relative w-full'>
         <Wrapper >
             <div className='flex items-center justify-center flex-col'>
                 <div className='bg-[#476260] flex items-center justify-center gap-2 text-[12px] text-white font-bold px-3 py-1 mb-6 rounded-full'>
@@ -25,7 +25,24 @@ const Hero = () => {
                 </div>
             </div>
         </Wrapper>
-        <Image width={100} height={100} src={"/hero-img.jpeg"} className='h-60 sm:h-90 w-[80%] sm:w-[60%] absolute -bottom-2 sm:-bottom-5 left-[50%] translate-x-[-50%] ' alt='feature-img'/>
+       
+       
+        {/* <Image width={100} height={100} src={"/hero-img.jpeg"} className='h-60 sm:h-90 w-[80%] sm:w-[60%] absolute -bottom-2 sm:-bottom-5 left-[50%] translate-x-[-50%] ' alt='feature-img'/> */}
+        <Wrapper>
+            <div className="relative -bottom-9">
+            <div className="rounded-lg lg:rounded-[22px] border border-border bg-background">
+                <Image
+                    src="/hero-img.jpeg"
+                    alt="dashboard"
+                    width={1920}
+                    height={1080}
+                    className="rounded-lg lg:rounded-[20px]"
+                />
+            </div>
+        </div>
+        </Wrapper>
+    
+    
     </div>
   )
 }
