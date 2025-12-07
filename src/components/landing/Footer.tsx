@@ -1,5 +1,4 @@
-import React from 'react'
-import Wrapper from '../global/Wrapper'
+import Wrapper from '@/components/global/Wrapper'
 import Link from 'next/link'
 
 const Footer = () => {

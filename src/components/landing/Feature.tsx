@@ -1,7 +1,7 @@
 import { CheckCircle, CircleCheck, CircleCheckBig, HandCoins, Mic, PenLine, Shredder, Sparkle } from "lucide-react"
-import Wrapper from "../global/Wrapper"
 import Image from "next/image"
 import { Button } from "../ui/button"
+import Wrapper from "@/components/global/Wrapper"
 
 const Feature = () => {
     const FeatureData = [

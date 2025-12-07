@@ -1,5 +1,5 @@
 import React from 'react'
-import Wrapper from '../global/Wrapper'
+import Wrapper from '@/components/global/Wrapper'
 import {Sparkle } from "lucide-react"
 import Image from 'next/image'
 import  Link  from 'next/link'
@@ -36,7 +36,7 @@ const Hero = () => {
                     alt="dashboard"
                     width={1920}
                     height={1080}
-                    className="rounded-lg lg:rounded-[20px]"
+                    className="rounded-lg lg:rounded-[20px] max-h-[600px]"
                 />
             </div>
         </div>

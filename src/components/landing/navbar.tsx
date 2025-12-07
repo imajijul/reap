@@ -1,7 +1,7 @@
 'use client'
-import Wrapper from "../global/Wrapper"
+import Wrapper from "@/components/global/Wrapper"
 import Link from "next/link"
-import { LinkData } from "@/src/constant/LinkData"
+import { LinkData } from "@/constant/LinkData"
 import { useState } from "react"
 import { Button } from "../ui/button"
 import MobileMenu from "./MobileMenu"

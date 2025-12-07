@@ -6,10 +6,10 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from "@/src/components/ui/sheet"
+} from "@/components/ui/sheet"
 import { Button } from '../ui/button'
 import { Menu } from 'lucide-react'
-import { LinkData } from '@/src/constant/LinkData'
+import { LinkData } from '@/constant/LinkData'
 import Link from 'next/link'
 const MobileMenu = () => {
   return (
