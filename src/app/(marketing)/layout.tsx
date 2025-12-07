@@ -1,5 +1,5 @@
 import Footer from '@/components/landing/Footer';
-import Navbar from '@/components/landing/';
+import Navbar from '@/components/landing/navbar';
 import React from 'react';
 
 
