@@ -1,13 +1,14 @@
+import Footer from '@/components/landing/Footer';
+import Navbar from '@/components/landing/Navbar';
 import React from 'react';
-import Footer from '../../components/landing/Footer';
-import Navbar from '../../components/landing/Navbar';
+
 
 
 interface Props {
     children: React.ReactNode
 }
 
-const MarketingLayout = ({ children }: Props) => {
+const Layout = ({ children }: Props) => {
     return (
         <>
             <Navbar />
@@ -19,4 +20,4 @@ const MarketingLayout = ({ children }: Props) => {
     );
 };
 
-export default MarketingLayout
+export default Layout
