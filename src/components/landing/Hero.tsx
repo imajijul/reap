@@ -4,9 +4,10 @@ import {Sparkle } from "lucide-react"
 import Image from 'next/image'
 import  Link  from 'next/link'
 import { Button } from '../ui/button'
+import { GridBg } from './GridBg'
 const Hero = () => {
   return (
-    <div className='bg-[#2F524D] h-full pt-15 relative w-full'>
+    <GridBg >
         <Wrapper >
             <div className='flex items-center justify-center flex-col'>
                 <div className='bg-[#476260] flex items-center justify-center gap-2 text-[12px] text-white font-bold px-3 py-1 mb-6 rounded-full'>
@@ -41,9 +42,7 @@ const Hero = () => {
             </div>
         </div>
         </Wrapper>
-    
-    
-    </div>
+    </GridBg>
   )
 }
 
