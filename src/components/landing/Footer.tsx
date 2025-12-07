@@ -4,18 +4,18 @@ import Link from 'next/link'
 
 const Footer = () => {
   return (
-    <footer className='w-full bg-[#101C1C] text-white py-10 sm:py-15'>
+    <footer className='w-full bg-[#101C1C] text-white py-10 px-5 sm:py-15'>
         <Wrapper>
-            <div className='flex-col sm:flex justify-between sm:items-center'>
+            <div className='sm:flex justify-between sm:items-center'>
                 {/* left side => company*/}
-                <div className=''>
+                <div className='text-center'>
                     <h1 className='text-4xl font-bold'>Reap</h1>
                     <address className='font-semibold py-4'>800 Se 4th Ave Suite 107, <br /> Bangladesh Dhaka-1207</address>
                 </div>
                 
                 {/* right side links */}
-                <div className='flex justify-between gap-3 sm:gap-20'>
-                    <ul className='flex flex-col gap-2'>
+                <div className='sm:flex justify-between gap-3 sm:gap-20'>
+                    <ul className='flex-col gap-2'>
                         <li className='text-muted-foreground'>Menu</li>
                         <li><Link href={"/"}>Benifits</Link></li>
                         <li><Link href={"/"}>Features</Link></li>
@@ -23,7 +23,7 @@ const Footer = () => {
                     </ul>
                     
                     {/* contacts */}
-                    <div className='flex flex-col'>
+                    <div className=''>
                         <div>
                             <h3 className='text-muted-foreground'>Phone</h3>
                             <p>+012479510</p>

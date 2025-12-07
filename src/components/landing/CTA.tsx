@@ -5,7 +5,7 @@ import { Button } from '../ui/button'
 
 const CTA = () => {
   return (
-    <div className='py-10 bg-[#2F524D] text-white'>
+    <div className='py-10 bg-[#2F524D] text-white max-sm:px-5'>
         <Wrapper>
             <div className='max-w-sm'>
                <h1 className='text-4xl font-bold'>See Reap in Action</h1>
@@ -16,7 +16,7 @@ const CTA = () => {
                     <Button className='bg-[#2E625A]'>Book a demo</Button>
                 </div>
 
-                <div className='flex gap-8 mt-4 items-center'>
+                <div className='sm:flex-col gap-8 mt-4 items-center'>
                     <p className='flex gap-2'> <Check/> No credit card needed</p>
                     <p className='flex gap-2'> <Check/> Cancel anytime</p>
                 </div>
