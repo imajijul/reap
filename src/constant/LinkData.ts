@@ -1,14 +1,10 @@
-export const LinkData = [
-    {
-        id: "benifits",
-        label: "Benifits"
-    },
-    {
-        id: "feature",
-        label: "Feature"
-    },
-    {
-        id: "how-it-works",
-        label: "How it works"
-    }
-]
+export interface LinkItem {
+  key: string; // translation key
+  href: string;
+}
+
+export const LinkData: LinkItem[] = [
+  { key: "benefits", href: "#benefits" },
+  { key: "feature", href: "#feature" },
+  { key: "howItWorks", href: "#how-it-works" },
+];

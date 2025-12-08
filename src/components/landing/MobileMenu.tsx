@@ -1,45 +1,48 @@
-import React from 'react'
+import React from "react";
+
+import { Button } from "../ui/button";
+import { Menu } from "lucide-react";
+
+import Link from "next/link";
 import {
   Sheet,
   SheetContent,
-  SheetDescription,
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from "@/src/components/ui/sheet"
-import { Button } from '../ui/button'
-import { Menu } from 'lucide-react'
-import { LinkData } from '@/src/constant/LinkData'
-import Link from 'next/link'
+} from "../ui/sheet";
+import { LinkData } from "@/constant/LinkData";
 const MobileMenu = () => {
   return (
     <Sheet>
-        <SheetTrigger className='lg:hidden'>
-            <Menu className='lg:hidden'/>
-        </SheetTrigger>
-        <SheetContent>
-            <SheetHeader>
-            <SheetTitle>Menu</SheetTitle>
-            <nav className="flex flex-col space-y-4">
-                    {LinkData.map((link, index) => (
-                        <Link
-                            key={index}
-                            href={link.id}
-                            className="text-base font-medium transition-colors hover:text-primary"
-                        >
-                            {link.label}
-                        </Link>
-                    ))}
-                    <hr />
-                    <div>
-                        <Button variant={"default"} className='me-4'>Sign in</Button>
-                        <Button variant={"default"}>Book a demo</Button>
-                    </div>
-                </nav>
-            </SheetHeader>
-        </SheetContent>
+      <SheetTrigger className="lg:hidden">
+        <Menu className="lg:hidden" />
+      </SheetTrigger>
+      <SheetContent>
+        <SheetHeader>
+          <SheetTitle>Menu</SheetTitle>
+          <nav className="flex flex-col space-y-4">
+            {LinkData.map((link, index) => (
+              <Link
+                key={index}
+                href={link.id}
+                className="text-base font-medium transition-colors hover:text-primary"
+              >
+                {link.label}
+              </Link>
+            ))}
+            <hr />
+            <div>
+              <Button variant={"default"} className="me-4">
+                Sign in
+              </Button>
+              <Button variant={"default"}>Book a demo</Button>
+            </div>
+          </nav>
+        </SheetHeader>
+      </SheetContent>
     </Sheet>
-  )
-}
+  );
+};
 
-export default MobileMenu
+export default MobileMenu;

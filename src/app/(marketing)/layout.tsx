@@ -1,5 +1,5 @@
-import Footer from "@/src/components/landing/Footer";
-import Navbar from "@/src/components/landing/Navbar";
+import Footer from "@/components/landing/Footer";
+import Navbar from "@/components/landing/navbar";
 
 export default function Layout({
   children,
@@ -8,10 +8,10 @@ export default function Layout({
 }>) {
   return (
     <html lang="en">
-      <body> 
-        <Navbar/>
+      <body>
+        <Navbar />
         <main className="min-h-screen">{children}</main>
-        <Footer/>
+        <Footer />
       </body>
     </html>
   );
