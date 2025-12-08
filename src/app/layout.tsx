@@ -1,7 +1,6 @@
 import { cn } from "@/lib/utils";
 import "./globals.css";
 import React from "react";
-import { cn } from "../lib/utils";
 import { I18nProvider } from "../../context/I18nContext";
 
 export default function RootLayout({
