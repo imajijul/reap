@@ -4,6 +4,7 @@ import { Button } from "../ui/button";
 import { Menu } from "lucide-react";
 
 import Link from "next/link";
+
 import {
   Sheet,
   SheetContent,
@@ -25,10 +26,10 @@ const MobileMenu = () => {
             {LinkData.map((link, index) => (
               <Link
                 key={index}
-                href={link.id}
+                href={link.href}
                 className="text-base font-medium transition-colors hover:text-primary"
               >
-                {link.label}
+                {link.key}
               </Link>
             ))}
             <hr />
