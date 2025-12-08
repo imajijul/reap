@@ -1,4 +1,4 @@
-import Wrapper from "../global/Wrapper";
+import Wrapper from "@/components/global/Wrapper";
 import Image from "next/image";
 const Process = () => {
   const ProcessData = [
