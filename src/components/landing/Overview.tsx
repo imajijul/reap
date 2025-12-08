@@ -1,5 +1,5 @@
 import React from 'react'
-import Wrapper from '../global/Wrapper'
+import Wrapper from '@/components/global/Wrapper'
 
 const Overview = () => {
     const OverviewData = [
