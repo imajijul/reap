@@ -1,6 +1,6 @@
 import { CircleCheckBig, HandCoins, Shredder } from "lucide-react"
 
-import Wrapper from "../global/Wrapper"
+import Wrapper from "@/components/global/Wrapper"
 
 const Introduce = () => {
     const IntroData = [

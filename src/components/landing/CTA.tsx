@@ -16,7 +16,7 @@ const CTA = () => {
                     <Button className='bg-[#2E625A]'>Book a demo</Button>
                 </div>
 
-                <div className='sm:flex-col gap-8 mt-4 items-center'>
+                <div className='sm:flex gap-8 mt-4 items-center'>
                     <p className='flex gap-2'> <Check/> No credit card needed</p>
                     <p className='flex gap-2'> <Check/> Cancel anytime</p>
                 </div>
