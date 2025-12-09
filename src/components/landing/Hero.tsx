@@ -18,10 +18,10 @@ const Hero = () => {
           </div>
 
           <div className="flex flex-col justify-center items-center text-center">
-            <h1 className="max-w-lg text-3xl sm:text-5xl text-white">
+            <h1 className="text-4xl text-white max-sm:text-3xl md:text-4xl lg:text-7xl font-bold text-center !leading-tight max-w-4xl mx-auto">
               {messages.title}
             </h1>
-            <p className="py-5 text-gray-200 font-semibold max-w-md">
+            <p className="py-8 text-gray-200 text-xl font-semibold max-w-md">
               {messages.subtitle}
             </p>
             <div className="flex items-center justify-center bg-white ps-3 pe-1 py-1 mb-8 rounded">
