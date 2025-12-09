@@ -56,7 +56,7 @@ const Hero = () => {
 
 
 
-    <div className="flex flex-col items-center justify-center w-full py-20 bg-[#2F524D]">
+    <div className="flex flex-col items-center justify-center w-full pt-20 bg-[#2F524D]">
       
       <Container>
           <div className="flex items-center justify-center flex-col">
@@ -91,18 +91,16 @@ const Hero = () => {
         </div>
       </Container>
             
-            
-            
-            
-      <div className="flex flex-col items-center justify-center gap-y-8 relative">
+                
+      <div className="flex flex-col items-center justify-center gap-y-8 relative top-9 bg-transparent">
           <Container delay={0.3} className="relative">
-            <div className="rounded-lg lg:rounded-[22px] border border-border bg-background">
+            <div className="rounded-lg lg:rounded-[22px]">
                 <Image
-                  src="/hero-img.jpeg"
+                  src="/hero-img.png"
                   alt="dashboard"
                   width={1920}
                   height={1080}
-                  className="rounded-lg lg:rounded-[20px] h-[600px]"
+                  className="rounded-lg lg:rounded-[20px] h-auto sm:h-[600px]"
                 />
             </div>
           </Container>

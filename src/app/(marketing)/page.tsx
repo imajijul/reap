@@ -9,20 +9,14 @@ import Process from "@/components/landing/Process"
 
 const Page = () => {
   return (
-    <>
-     <Wrapper>
+    <Wrapper>
         <Hero/>
+        <Introduce/>
+        <Feature/>
+        <Process/>
+        <Overview/>
+        <CTA/>
      </Wrapper>
-
-     <Introduce/>
-     <Feature/>
-     <Process/>
-     <Overview/>
-     <CTA/>
-
-
-    
-    </>
   )
 }
 

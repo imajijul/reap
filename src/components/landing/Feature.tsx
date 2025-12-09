@@ -11,6 +11,7 @@ import {
 import Image from "next/image";
 import { Button } from "../ui/button";
 import Wrapper from "@/components/global/Wrapper";
+import Container from "../global/Container";
 
 const Feature = () => {
   const FeatureData = [
@@ -36,21 +37,24 @@ const Feature = () => {
 
   return (
     <div className="py-20 w-full">
-      <Wrapper>
-        {/* feature header */}
-        <div className="text-center pb-5 sm:pb-10 flex flex-col items-center justify-center">
-          <p className="text-[#111] font-semibold flex items-center justify-center gap-2 border border-[#111] rounded-full px-5 py-1 mb-5 text-sm">
-            <PenLine className="w-4 h-4" />
-            FEATURES
-          </p>
-          <h1 className="max-w-sm text-[25px] sm:text-3xl font-semibold">
-            Built to Solve the Chalanges You Face Every Day .
-          </h1>
-        </div>
+
+      {/* feature header */}
+      <Container>
+          <div className="text-center pb-5 sm:pb-10 flex flex-col items-center justify-center">
+            <p className="text-[#111] font-semibold flex items-center justify-center gap-2 border border-[#111] rounded-full px-5 py-1 mb-5 text-sm">
+              <PenLine className="w-4 h-4" />
+              FEATURES
+            </p>
+            <h1 className="max-w-sm text-[25px] sm:text-3xl font-semibold">
+              Built to Solve the Chalanges You Face Every Day .
+            </h1>
+          </div>
+        </Container>
 
         <div className="grid sm:grid-cols-2 gap-10 sm:px-24">
           {/* left side -> feature */}
-          <div className="bg-gray-200/30 p-4 rounded">
+          <Container delay={.3}>
+            <div className="bg-gray-200/30 p-4 rounded">
             <div className="flex gap-4">
               <span>
                 <Sparkle className="w-6 h-6 bg-[#2D605A] rounded-[50%] p-1 text-white " />
@@ -84,9 +88,11 @@ const Feature = () => {
               Your team gets guided, support not guesswork.
             </p>
           </div>
+          </Container>
 
           {/* right side -> feature */}
-          <div className="bg-gray-200/30 p-4 rounded">
+          <Container delay={.3}>
+            <div className="bg-gray-200/30 p-4 rounded">
             <div className="flex flex-col gap-2 -me-4">
               <div className="flex gap-3 items-center text-muted-foreground bg-white py-2 px-1 border border-primary/20">
                 <CircleCheck />
@@ -117,17 +123,19 @@ const Feature = () => {
               Your team gets guided, support not guesswork.
             </p>
           </div>
+          </Container>
         </div>
+
 
         {/* all features here */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 sm:px-0 xl:px-25 sm:py-10 gap-12">
           {FeatureData &&
             FeatureData.map((item, i) => {
               return (
-                <div
+                <Container key={i} delay={.1*i+.2}>
+                  <div
                   className="px-4 sm:px-10 bg-gray-200/30 p-5 rounded"
-                  key={i}
-                >
+                  key={i}>
                   <Image
                     src={item.img}
                     width={100}
@@ -140,10 +148,10 @@ const Feature = () => {
                   </h1>
                   <p className="text-gray-600">{item.description}</p>
                 </div>
+                </Container>
               );
             })}
         </div>
-      </Wrapper>
     </div>
   );
 };
