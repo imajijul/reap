@@ -1,3 +1,4 @@
+import Wrapper from "@/components/global/Wrapper"
 import CTA from "@/components/landing/CTA"
 import Feature from "@/components/landing/Feature"
 import Hero from "@/components/landing/Hero"
@@ -9,12 +10,18 @@ import Process from "@/components/landing/Process"
 const Page = () => {
   return (
     <>
-     <Hero/>
+     <Wrapper>
+        <Hero/>
+     </Wrapper>
+
      <Introduce/>
      <Feature/>
      <Process/>
      <Overview/>
      <CTA/>
+
+
+    
     </>
   )
 }
