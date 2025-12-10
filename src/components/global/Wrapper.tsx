@@ -3,6 +3,7 @@ import React from "react";
 interface Props {
   className?: string;
   children: React.ReactNode;
+
 }
 const Wrapper = ({ children, className }: Props) => {
   return (
