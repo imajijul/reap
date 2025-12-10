@@ -1,3 +1,4 @@
+'use client'
 import {
   CheckCircle,
   CircleCheck,
@@ -10,47 +11,45 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import { Button } from "../ui/button";
-import Wrapper from "@/components/global/Wrapper";
 import Container from "../global/Container";
+import { FeatureData } from "@/constant/FeatureData";
+
+
+// features
+import enFeatures from "@/locales/landing/en/feature/feature.json"
+import bnFeatures from "@/locales/landing/bn/feature/feature.json"
+import arFeatures from "@/locales/landing/ar/feature/feature.json"
+import { useI18n } from "context/I18nContext";
+
 
 const Feature = () => {
-  const FeatureData = [
-    {
-      img: "/hero-img.jpeg",
-      title: "Contrary to popular belief, Lorem",
-      description:
-        "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classica",
-    },
-    {
-      img: "/hero-img.jpeg",
-      title: "Contrary to popular belief, Lorem",
-      description:
-        "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classica",
-    },
-    {
-      img: "/hero-img.jpeg",
-      title: "Contrary to popular belief, Lorem",
-      description:
-        "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classica",
-    },
-  ];
 
+   const {locale} = useI18n()    
+
+  const texts = locale === "bn" ? bnFeatures : locale=== "ar"? arFeatures: enFeatures
+  
   return (
     <div className="py-20 w-full">
 
       {/* feature header */}
       <Container>
           <div className="text-center pb-5 sm:pb-10 flex flex-col items-center justify-center">
+            {/* preHeading */}
             <p className="text-[#111] font-semibold flex items-center justify-center gap-2 border border-[#111] rounded-full px-5 py-1 mb-5 text-sm">
               <PenLine className="w-4 h-4" />
-              FEATURES
+             {texts.preHeading}
             </p>
+
+            {/* title */}
             <h1 className="max-w-sm text-[25px] sm:text-3xl font-semibold">
-              Built to Solve the Chalanges You Face Every Day .
+              {texts.pageTitle}
             </h1>
           </div>
         </Container>
 
+
+        {/* translation should add */}
+        
         <div className="grid sm:grid-cols-2 gap-10 sm:px-24">
           {/* left side -> feature */}
           <Container delay={.3}>
@@ -144,9 +143,9 @@ const Feature = () => {
                     className="w-full rounded"
                   />
                   <h1 className="text-md font-semibold py-2 sm:py-3">
-                    {item.title}
+                    {texts[item.title]}
                   </h1>
-                  <p className="text-gray-600">{item.description}</p>
+                  <p className="text-gray-600">{texts[item.description]}</p>
                 </div>
                 </Container>
               );

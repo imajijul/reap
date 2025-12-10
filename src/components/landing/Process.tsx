@@ -1,28 +1,21 @@
+'use client'
 import Wrapper from "@/components/global/Wrapper";
 import Image from "next/image";
 
 import Container from "../global/Container";
+import { ProcessData } from "@/constant/ProcessData";
+import { useI18n } from "context/I18nContext";
 
-
+// process
+import enProcess from "@/locales/landing/en/process/process.json"
+import bnProcess from "@/locales/landing/bn/process/process.json"
+import arProcess from "@/locales/landing/ar/process/process.json"
 
 const Process = () => {
-  const ProcessData = [
-    {
-      title: "Contrary to popular belief, Lorem",
-      description:
-        "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classica",
-    },
-    {
-      title: "Contrary to popular belief, Lorem",
-      description:
-        "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classica",
-    },
-    {
-      title: "Contrary to popular belief, Lorem",
-      description:
-        "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classica",
-    },
-  ];
+    const {locale} = useI18n()    
+
+    const texts = locale === "bn" ? bnProcess : locale=== "ar"? arProcess: enProcess
+
   return (
 
 
@@ -41,7 +34,7 @@ const Process = () => {
         </Container>
 
         {/* prcess card list */}
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 sm:px-0 xl:px-25 sm:py-10 gap-12">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 sm:py-10 gap-12">
             {ProcessData &&
               ProcessData.map((item, i) => {
                 return (
@@ -51,8 +44,8 @@ const Process = () => {
                     <span className="max-px-1 max-w-6 max-h-6 bg-[#2D605A] rounded-[50%] text-white flex justify-center">
                       {i + 1}
                     </span>
-                    <h1 className="text-md font-semibold py-2 sm:py-3">{item.title}</h1>
-                    <p className="text-gray-600">{item.description}</p>
+                    <h1 className="text-md font-semibold py-2 sm:py-3">{texts[item.title]}</h1>
+                    <p className="text-gray-600">{texts[item.description]}</p>
                   </div>
                   </Container>
                 );
@@ -70,8 +63,12 @@ const Process = () => {
 
             {/*  */}
         <div>
+
+
+          {/* bottomTitle */}
+
           <Container>
-            <h1 className="text-center sm:text-4xl max-w-2xl font-semibold py-15">Before Reap, I used to get constant follow-ups from Medicaid. Now my cases get approved the first time.</h1>
+            <h1 className="text-center sm:text-4xl max-w-2xl font-semibold py-15">{texts.bottomTitle}</h1>
           </Container>
         </div>
         
@@ -82,10 +79,10 @@ const Process = () => {
             </Container>
 
             <Container delay={.25} className="text-center">
-              <h1 className="font-semibold mt-2">Stephine</h1>
+              <h1 className="font-semibold mt-2">{texts.managerName}</h1>
             </Container>
             <Container delay={.35} className="text-center">
-              <p>Business Office Manager, AL</p>
+              <p>{texts.managerDesig}</p>
             </Container>
         </div>
       </div>

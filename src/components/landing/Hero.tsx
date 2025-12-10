@@ -10,6 +10,7 @@ import Container from "../global/Container";
 const Hero = () => {
   const { messages } = useI18n();
   return (
+    // previous code
     // <div className="bg-[#2F524D] h-full pt-15 relative w-full">
     //   <Wrapper>
     //     <div className="flex items-center justify-center flex-col">
