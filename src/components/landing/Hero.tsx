@@ -6,6 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "../ui/button";
 import { useI18n } from "../../../context/I18nContext";
+import Container from "../global/Container";
 
 const Hero = () => {
   const { messages } = useI18n();
@@ -78,6 +79,10 @@ const Hero = () => {
         <div className="bg-gradient-to-t from-background to-transparent absolute bottom-0 inset-x-0 w-full h-1/2"></div>
       </div>
     </div>
+
+
+
+
   );
 };
 
