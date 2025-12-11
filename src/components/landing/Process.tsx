@@ -25,10 +25,10 @@ const Process = () => {
         <Container>
           <div className="text-center pb-5 sm:pb-10 flex flex-col items-center justify-center">
             <p className="text-[#111] font-semibold flex items-center justify-center gap-2 border border-[#111] rounded-full px-5 py-1 mb-5 text-sm">
-              PROCESS
+              {texts.preHeading}
             </p>
             <h1 className="max-w-sm text-[25px] sm:text-3xl font-semibold">
-              How It Works Today
+              {texts.pageTitle}
             </h1>
           </div>
         </Container>
