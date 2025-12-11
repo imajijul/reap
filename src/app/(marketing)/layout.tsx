@@ -16,17 +16,3 @@ export default function Layout({
     </html>
   );
 }
-
-const Layout = ({ children }: Props) => {
-    return (
-        <>
-            <Navbar />
-            <main className="mx-auto w-full z-40 relative">
-                {children}
-            </main>
-            <Footer />
-        </>
-    );
-};
-
-export default Layout
