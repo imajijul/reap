@@ -1,34 +1,26 @@
-import Wrapper from "@/components/global/Wrapper"
-import CTA from "@/components/landing/CTA"
-import Feature from "@/components/landing/Feature"
-import Hero from "@/components/landing/Hero"
-import Introduce from "@/components/landing/Introduce"
-import Overview from "@/components/landing/Overview"
-import Process from "@/components/landing/Process"
-
+import Wrapper from "@/components/global/Wrapper";
+import CTA from "@/components/landing/CTA";
+import Feature from "@/components/landing/Feature";
+import Hero from "@/components/landing/Hero";
+import Introduce from "@/components/landing/Introduce";
+import Overview from "@/components/landing/Overview";
+import Process from "@/components/landing/Process";
 
 const Page = () => {
   return (
-
     <>
-
       <Hero />
 
       <Wrapper>
-          <Introduce/>
-          <Feature/>
-          <Process/>
+        <Introduce />
+        <Feature />
+        <Process />
       </Wrapper>
 
-      <Overview/>
-      <CTA/>
-
-
-
+      <Overview />
+      <CTA />
     </>
-  )
-}
+  );
+};
 
-export default Page
-
-
+export default Page;
