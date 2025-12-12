@@ -32,6 +32,11 @@ import enOverview from "@/locales/landing/en/overview/overview.json"
 import bnOverview from "@/locales/landing/bn/overview/overview.json"
 import arOverview from "@/locales/landing/ar/overview/overview.json"
 
+// cta
+import enCTA from "@/locales/landing/en/cta/cta.json"
+import bnCTA from "@/locales/landing/bn/cta/cta.json"
+import arCTA from "@/locales/landing/ar/cta/cta.json"
+
 // FIX: allow nested objects
 type Messages = Record<string, any>;
 
@@ -50,13 +55,13 @@ export const I18nProvider = ({ children }: { children: ReactNode }) => {
 
   switch (locale) {
     case "bn":
-      messages = { ...bnNavbar, ...bnHero, ...bnIntro, ...bnFeatures, ...bnProcess, ...bnOverview };
+      messages = { ...bnNavbar, ...bnHero, ...bnIntro, ...bnFeatures, ...bnProcess, ...bnOverview, ...bnCTA };
       break;
     case "ar":
-      messages = { ...arNavbar, ...arHero, ...arIntro, ...arFeatures, ...arProcess, ...arOverview };
+      messages = { ...arNavbar, ...arHero, ...arIntro, ...arFeatures, ...arProcess, ...arOverview, arCTA };
       break;
     default:
-      messages = { ...enNavbar, ...enHero, ...enIntro, ...enFeatures, ...enProcess, ...enOverview };
+      messages = { ...enNavbar, ...enHero, ...enIntro, ...enFeatures, ...enProcess, ...enOverview, enCTA };
   }
 
   return (
