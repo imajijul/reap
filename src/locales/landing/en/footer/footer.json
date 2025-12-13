@@ -1,0 +1,16 @@
+{   "navTitle": "menu",
+    "navMenu": ["Benefits", "Features", "How it works"],
+    "contact": [
+        {   "id": "phone",
+            "label": "phone",
+            "link" : "518-658-3200"
+        },
+        {   "id": "email",
+            "label": "Email",
+            "link" : "contact@getreap.com"
+        }
+    ],
+     "copyRight": "All rights reserved",
+     "termsConditon" : ["Privacy Policy", "Terms of Service", "Cookies Settings"]
+
+}

@@ -1,9 +1,23 @@
+'use client'
 import Wrapper from "@/components/global/Wrapper";
 import Link from "next/link";
 import Image from "next/image";
 import { Linkedin } from "lucide-react";
+import { useI18n } from "context/I18nContext";
+
+// footer
+import enFooter from "@/locales/landing/en/footer/footer.json"
+import bnFooter from "@/locales/landing/bn/footer/footer.json"
+import arFooter from "@/locales/landing/ar/footer/footer.json"
+
 
 const Footer = () => {
+
+    const { locale } = useI18n();
+  
+    const texts =
+      locale === "bn" ? bnFooter : locale === "ar" ? arFooter : enFooter;
+
   return (
     <footer className="w-full bg-[#0F1619] text-white py-12 sm:py-16">
       <Wrapper>
@@ -55,64 +69,41 @@ const Footer = () => {
             {/* Menu Links */}
             <div>
               <h3 className="text-xs uppercase tracking-widest text-gray-500 font-semibold mb-4">
-                Menu
+                {texts.navTitle}
               </h3>
               <ul className="space-y-3">
-                <li>
-                  <Link
-                    href="/"
-                    className="text-gray-300 hover:text-white transition-colors text-sm"
-                  >
-                    Benefits
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/"
-                    className="text-gray-300 hover:text-white transition-colors text-sm"
-                  >
-                    Features
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/"
-                    className="text-gray-300 hover:text-white transition-colors text-sm"
-                  >
-                    How it works
-                  </Link>
-                </li>
+                  {
+                    texts.navMenu.map((nav, i)=>{
+                      return(
+                        <li key={i}><Link href={"#"}>{nav}</Link></li>
+                      )
+                    })
+                  }
               </ul>
             </div>
 
+
             {/* Contact Info */}
             <div>
-              {/* Phone */}
-              <div className="mb-6">
-                <h4 className="text-xs uppercase tracking-widest text-gray-500 font-semibold mb-2">
-                  Phone
-                </h4>
-                <a
-                  href="tel:+15186583200"
-                  className="text-gray-300 hover:text-white transition-colors text-sm"
-                >
-                  518-658-3200
-                </a>
-              </div>
+              {
+              texts.contact.map((item,i)=>{
+                return(
 
-              {/* Email */}
-              <div>
-                <h4 className="text-xs uppercase tracking-widest text-gray-500 font-semibold mb-2">
-                  Email
-                </h4>
-                <a
-                  href="mailto:contact@getreap.com"
-                  className="text-gray-300 hover:text-white transition-colors text-sm"
-                >
-                  contact@getreap.com
-                </a>
-              </div>
+                  // email === mailto: phone === tel:
+                  <div className="mb-6" key={i}>
+                    <h4 className="text-xs uppercase tracking-widest text-gray-500 font-semibold mb-2">
+                     {item.label}</h4>
+                    <a
+                      href={ `${item.id==="phone"? "tel:": "mailto:"}${item.link}`}
+                      className="text-gray-300 hover:text-white transition-colors text-sm">
+                      {item.link}</a>
+                  </div>
+                )
+
+              })
+            }
             </div>
+            
           </div>
         </div>
 
@@ -120,7 +111,7 @@ const Footer = () => {
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
           {/* Copyright */}
           <div className="flex items-center gap-3">
-            <p className="text-gray-400 text-sm">© Reap. All rights reserved</p>
+            <p className="text-gray-400 text-sm">© Reap. {texts.copyRight}</p>
             <a
               href="https://linkedin.com"
               target="_blank"
@@ -133,30 +124,22 @@ const Footer = () => {
 
           {/* Footer Links */}
           <ul className="flex flex-wrap gap-4 sm:gap-6">
-            <li>
-              <Link
-                href="/"
-                className="text-gray-400 hover:text-white transition-colors text-sm"
-              >
-                Privacy Policy
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/"
-                className="text-gray-400 hover:text-white transition-colors text-sm"
-              >
-                Terms of Service
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/"
-                className="text-gray-400 hover:text-white transition-colors text-sm"
-              >
-                Cookies Settings
-              </Link>
-            </li>
+            
+            {
+              texts.termsConditon.map((item,i)=>{
+                return(
+                  <li>
+                    <Link
+                      href="#"
+                      className="text-gray-400 hover:text-white transition-colors text-sm"
+                    >
+                     {item}
+                    </Link>
+                  </li>
+                )
+              })
+            }
+
           </ul>
         </div>
       </Wrapper>
