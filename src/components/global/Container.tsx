@@ -6,9 +6,9 @@ import { motion } from "motion/react";
 interface Props {
     className?: string;
     children: React.ReactNode;
-    delay?: number | undefined;
+    delay?: number;
     reverse?: boolean;
-    simple?: boolean;
+    simple?: number | undefined;
 }
 
 const Container = ({ children, className, delay = 0.2, reverse, simple }: Props) => {
