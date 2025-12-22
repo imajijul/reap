@@ -34,7 +34,7 @@ const MobileMenu = () => {
             ))}
             <hr />
             <div>
-              <Button variant={"default"} className="me-4">
+              <Button variant={"default"} className="me-4 mb-2">
                 Sign in
               </Button>
               <Button variant={"default"}>Book a demo</Button>
