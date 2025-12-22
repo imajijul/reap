@@ -128,7 +128,7 @@ const Footer = () => {
             {
               texts.termsConditon.map((item,i)=>{
                 return(
-                  <li>
+                  <li key={i}>
                     <Link
                       href="#"
                       className="text-gray-400 hover:text-white transition-colors text-sm"

@@ -6,7 +6,7 @@ import { motion } from "motion/react";
 interface Props {
     className?: string;
     children: React.ReactNode;
-    delay?: number;
+    delay?: number | undefined;
     reverse?: boolean;
     simple?: boolean;
 }
